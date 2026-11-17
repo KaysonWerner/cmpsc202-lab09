@@ -2,7 +2,7 @@
 
 **Instructions:** Work in small groups to complete the following exercises. Try sketching out your work on the whiteboards or scratch paper. Everyone should submit their own answers to the exercises, but you are encouraged to discuss your reasoning with your group members.
 
-Name(s): ___________________________
+Name(s): Kayson Werner
 
 ---
 
@@ -30,8 +30,12 @@ Procedure Mystery(A, n)
 ### Part A: The Recurrence Relation
 Let $T(n)$ be the running time of `Mystery` on an input of size $n$. Write down a recurrence relation for the worst-case running time $T(n)$. You may assume $n$ is a power of 3 for simplicity. *(Note: You do not need to solve the recurrence relation yet, just formulate it).*
 
+There are two recursive calls, one with size n/3 and another with size 2n/3. The combine step takes linear time because of the loop
+
 ### Part B: Visualizing Algorithm Behavior
 Without solving the recurrence, look closely at the recursive calls and the combine step. If you were to draw the recursion tree for this algorithm, what would it look like? Is the tree balanced or skewed? 
+
+The recursion tree is unbalanced because the two recursive calls have different sizes. One branch handles 1/3 of the input while the other handles 2/3. The alrger branch continues deeper than the smaller branch
 
 ---
 
@@ -49,8 +53,12 @@ where $c$ is a positive constant.
 Analyze the running time of the algorithm by unrolling the recursion tree. Specifically, answer the following questions:
 
 1. **Root Work:** Find the amount of work done at the root level (level $0$) of the recursion tree.
+cn^2
 2. **First Levels:** Find the amount of work done at level $1$ and level $2$ of the recursion tree.
+(3cn^2)/4
+(9cn^2)/16
 3. **Tree Height:** Find the height of the recursion tree (at what level does the input size reach $1$?).
+n/(2^i) = 1
 
 **Bonus!** Find a general formula for the total work done at level $i$ of the recursion tree.
 
